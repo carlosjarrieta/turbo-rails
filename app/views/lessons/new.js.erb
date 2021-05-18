@@ -1,0 +1,18 @@
+
+
+$('<%= j render "form", lesson: @lesson, course: @course %>')
+  .on("shown.bs.modal", function (e) {
+    var form = $('#new_lesson');
+
+    form.validate();
+
+    form.on('submit', function () {
+      $('#modal-form-lesson').modal('hide')
+    })
+  })
+  //############################################################################
+  .on("hidden.bs.modal", function (e) {
+    $(this).remove();
+    $(".modal-backdrop").remove();
+  })
+  .modal({ backdrop: 'static', keyboard: false });

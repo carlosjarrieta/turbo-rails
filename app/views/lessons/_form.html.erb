@@ -1,0 +1,42 @@
+<div class="modal" tabindex="-1" id="modal-form-lesson">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <%= simple_form_for lesson, url: [@course, lesson], validate: true do |form| %>
+        <div class="modal-body">
+          <% if lesson.errors.any? %>
+            <div id="error_explanation">
+              <h2><%= pluralize(lesson.errors.count, "error") %> prohibited this lesson from being saved:</h2>
+              <ul>
+                <% lesson.errors.each do |error| %>
+                  <li><%= error.full_message %></li>
+                <% end %>
+              </ul>
+            </div>
+          <% end %>
+          <div class="field">
+            <%= form.label :title %>
+            <%= form.text_field :title, class:"form-control" %>
+          </div>
+          <div class="field">
+            <%= form.label :content %>
+            <%= form.text_area :content, class:"form-control"  %>
+          </div>
+          <div class="actions">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <%= button_tag type: 'submit', class:"btn btn-primary", id:"cmd_save" do %>
+            <%= "Guardar" %>
+          <% end %>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,8 @@
+<tr>
+  <td><%= lesson.course_id %></td>
+  <td><%= lesson.title %></td>
+  <td><%= lesson.content %></td>
+  <td><%= link_to 'Show', [@course, lesson], target: "_top" %></td>
+  <td><%= link_to 'Edit', edit_course_lesson_path(@course, lesson), remote: true %></td>
+  <td><%= link_to 'Destroy', [@course, lesson], method: :delete, data: { confirm: 'Are you sure?' }, target: "_top" %></td>
+</tr>

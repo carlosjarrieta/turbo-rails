@@ -1,0 +1,11 @@
+<%= simple_form_for course, validate: true do |form| %>
+  <div class="field">
+    <%= form.input :title %>
+  </div>
+  <div class="field">
+    <%= form.input :description %>
+  </div>
+  <div class="actions">
+    <%= submit_tag "Guardar" %>
+  </div>
+<% end %>

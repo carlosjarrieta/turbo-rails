@@ -1,0 +1,25 @@
+{
+  "name": "bootstrap",
+  "private": true,
+  "dependencies": {
+    "@client-side-validations/client-side-validations": "^0.1.5",
+    "@client-side-validations/simple-form": "^0.2.0",
+    "@hotwired/turbo-rails": "^7.0.0-beta.5",
+    "@rails/actioncable": "^6.0.0",
+    "@rails/activestorage": "^6.0.0",
+    "@rails/ujs": "^6.0.0",
+    "@rails/webpacker": "5.3.0",
+    "bootstrap": "4.6",
+    "daterangepicker": "^3.1.0",
+    "jquery": "^3.6.0",
+    "jquery-validation": "^1.19.3",
+    "moment": "^2.29.1",
+    "popper.js": "^1.16.1",
+    "webpack": "^4.46.0",
+    "webpack-cli": "^3.3.12"
+  },
+  "version": "0.1.0",
+  "devDependencies": {
+    "webpack-dev-server": "^3.11.2"
+  }
+}
